@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+}
+
+/* Sidebar */
+.sidebar {
+  position: fixed;
+  top: 0; left: 0;
+  width: 220px;
+  height: 100vh;
+  background: #000;
+  color: yellow;
+  display: flex;
+  flex-direction: column;
+}
+.sidebar .logo {
+  background: yellow;
+  padding: 10px;
+  text-align: center;
+}
+.sidebar .logo img {
+  max-width: 100%;
+  height: 50px;
+}
+.sidebar nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.sidebar nav ul li {
+  padding: 15px;
+  cursor: pointer;
+}
+.sidebar nav ul li:hover {
+  background: #333;
+}
+
+/* Main content */
+.content {
+  margin-left: 220px;
+  padding: 20px;
+}
+.screen.hidden {
+  display: none;
+}
+
+/* Tree + details */
+#dataTree, #dashboardTree {
+  margin-top: 15px;
+  max-height: 500px;
+  overflow-y: auto;
+  border: 1px solid #ccc;
+  padding: 10px;
+  background: #fff;
+}
+.node { margin-left: 20px; cursor: pointer; }
+
+/* Environment badges */
+.badge {
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-size: 12px;
+  margin-left: 5px;
+  color: #fff;
+}
+.badge.sandbox { background: blue; }
+.badge.hotfix { background: orange; }
+.badge.live { background: green; }
+
+/* Buttons */
+button {
+  margin: 5px 0;
+  padding: 6px 12px;
+  background: black;
+  color: yellow;
+  border: none;
+  cursor: pointer;
+}
+button:hover {
+  background: #333;
+}

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Solution Keeper</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/logo.png" alt="Logo">
+      </div>
+      <nav>
+        <ul>
+          <li data-screen="entry">Solution Entry</li>
+          <li data-screen="data">Solution Data</li>
+          <li data-screen="dashboard">Dashboard</li>
+        </ul>
+      </nav>
+    </aside>
+
+    <main class="content">
+      <!-- Solution Entry -->
+      <section id="entry" class="screen">
+        <h2>Solution Entry</h2>
+        <form id="solutionForm">
+          <label>Solution Code: <input type="text" id="solutionCode" required></label>
+          <label>Solution Date: <input type="date" id="solutionDate" required></label>
+          <label>Environment:
+            <select id="environment">
+              <option>Sandbox</option>
+              <option>Staging/Hotfix</option>
+              <option>Live</option>
+            </select>
+          </label>
+          <div id="issuesContainer"></div>
+          <button type="button" id="addIssue">+ Add Issue</button>
+          <button type="submit">Save Solution</button>
+        </form>
+      </section>
+
+      <!-- Solution Data -->
+      <section id="data" class="screen hidden">
+        <h2>Solution Data</h2>
+        <input type="text" id="dataSearch" placeholder="Search by Solution ID or Issue ID">
+        <button id="deleteSelected">Delete Selected</button>
+        <div id="dataTree"></div>
+      </section>
+
+      <!-- Dashboard -->
+      <section id="dashboard" class="screen hidden">
+        <h2>Dashboard</h2>
+        <input type="text" id="dashboardSearch" placeholder="Global Search (Solution ID, Issue ID, Description)">
+        <div id="dashboardTree"></div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
